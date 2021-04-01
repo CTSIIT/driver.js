@@ -11,16 +11,17 @@
     "deploy-demo": "NODE_DEBUG=gh-pages gh-pages -d dist/demo"
   },
   "bugs": {
-    "url": "https://github.com/kamranahmedse/driver.js/issues"
+    "url": "https://github.com/CTSIIT/driver.js"
   },
-  "homepage": "https://github.com/kamranahmedse/driver.js#readme",
-  "repository": "https://github.com/kamranahmedse/driver.js",
+  "homepage": "https://github.com/CTSIIT/driver.js#readme",
+  "repository": "https://github.com/CTSIIT/driver.js",
   "author": "Kamran Ahmed <kamranahmed.se@gmail.com>",
+  "contributors":"Brian Petersen <bmp58@pitt.edu>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-env": "^7.9.0",
     "autoprefixer": "^9.7.4",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.6",
@@ -47,7 +48,6 @@
     "webpack-cli": "^3.3.4",
     "webpack-dev-server": "^3.7.1"
   },
-  "dependencies": {},
   "browserslist": [
     "defaults"
   ]

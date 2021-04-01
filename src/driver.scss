@@ -104,7 +104,15 @@ div#driver-popover-item {
       display: none;
     }
   }
-
+    
+    .driver-close-btn-x {
+        float: right;
+		cursor: pointer;
+        border: none;
+        background: none;
+    }
+	
+	
   .driver-popover-footer {
     display: block;
     margin-top: 10px;

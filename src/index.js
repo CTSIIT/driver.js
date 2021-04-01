@@ -3,6 +3,7 @@ import Element from './core/element';
 import Popover from './core/popover';
 import {
   CLASS_CLOSE_BTN,
+  CLASS_CLOSE_BTN_X,
   CLASS_NEXT_STEP_BTN,
   CLASS_PREV_STEP_BTN,
   ESC_KEY_CODE,
@@ -138,7 +139,7 @@ export default class Driver {
 
     const nextClicked = e.target.classList.contains(CLASS_NEXT_STEP_BTN);
     const prevClicked = e.target.classList.contains(CLASS_PREV_STEP_BTN);
-    const closeClicked = e.target.classList.contains(CLASS_CLOSE_BTN);
+    const closeClicked = e.target.classList.contains(CLASS_CLOSE_BTN) | e.target.classList.contains(CLASS_CLOSE_BTN_X);
 
     if (closeClicked) {
       this.reset();
