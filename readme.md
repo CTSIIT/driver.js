@@ -1,25 +1,22 @@
+Fork of Driver.js for CTSI Purposes.  Current Driver.js didn't seem to be maintained well.
+
 <h1 align="center"><img height="150" src="./demo/images/driver.png" /><br> Driver.js</h1>
 
 <p align="center">
   <a href="https://github.com/kamranahmedse/driver.js/blob/master/license">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://npmjs.org/package/driver.js">
-    <img src="https://img.shields.io/npm/v/driver.js.svg" alt="version" />
-  </a>
-  <a href="https://npmjs.org/package/driver.js">
-    <img src="https://img.shields.io/npm/dt/driver.js.svg" alt="downloads" />
-  </a>
 </p>
 
 <p align="center">
-  <b>Powerful, highly customizable vanilla JavaScript engine to drive the user's focus across the page</b></br>
-  <sub>No external dependencies, supports all major browsers and highly customizable <sub>
+  <b>Powerful yet light-weight, vanilla JavaScript engine to drive the user's focus across the page</b></br>
+  <sub>Only ~4kb, no external dependency, supports all major browsers and highly customizable <sub>
 </p>
 
 <br />
 
 * **Simple**: is simple to use and has no external dependency at all
+* **Light-weight**: ~4kb in size, vanilla JavaScript and no external dependency
 * **Highly customizable**: has a powerful API and can be used however you want
 * **Highlight anything**: highlight any (literally any) element on page
 * **Feature introductions**: create powerful feature introductions for your web applications
@@ -38,26 +35,21 @@ For Usage and Examples, [have a look at demo](http://kamranahmed.info/driver.js)
 
 Driver.js is written in Vanilla JS, has zero dependencies and is highly customizable. It has several options allowing you to manipulate how it behaves and also **provides you the hooks** to manipulate the elements as they are highlighted, about to be highlighted, or deselected.
 
+## Build
+Node.js - Installed Version 15.13.0 https://nodejs.org/en/download/current/
+Visual Studio 2017 - C++ Development Added through Visual Studio Installer
+Python 2 - Installed Version 2.7.18 https://www.python.org/downloads/windows/
+
+
 ## Installation
 
-You can install it using `yarn` or `npm`, whatever you prefer.
+in Node.JS inside the driver.js Folder
 
-```bash
-yarn add driver.js
-npm install driver.js
-```
-Or include it using CDN. If you want a specific version, put it as `driver.js@0.5` in the name
-```html
-<script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
-```
+--Install Dependencies 
+npm install
 
-Or grab the code from `dist` directory and include it directly.
-
-```html
-<link rel="stylesheet" href="/dist/driver.min.css">
-<script src="/dist/driver.min.js"></script>
-```
+--Build
+npm run build
 
 ![](./demo/images/split.png)
 
@@ -206,7 +198,7 @@ driver.defineSteps([
     onNext: () => {
       // Prevent moving to the next step
       driver.preventMove();
-      
+
       // Perform some action or create the element to move to
       // And then move to that element
       setTimeout(() => {
@@ -252,7 +244,7 @@ const driver = new Driver({
   stageBackground: '#ffffff',       // Background color for the staged behind highlighted element
   nextBtnText: 'Next',              // Next button text for this step
   prevBtnText: 'Previous',          // Previous button text for this step
-  showButtons: false,               // Do not show control buttons in footer
+  showButtons: false | ['next', 'prev', 'close'],               // Do not show control buttons in footer
   keyboardControl: true,            // Allow controlling through keyboard (escape to close, arrow keys to move)
   scrollIntoViewOptions: {},        // We use `scrollIntoView()` when possible, pass here the options for it if you want any
   onHighlightStarted: (Element) => {}, // Called when element is about to be highlighted
@@ -281,7 +273,7 @@ const stepDefinition = {
     doneBtnText: 'Done',        // Text on the last button
     closeBtnText: 'Close',      // Text on the close button
     nextBtnText: 'Next',        // Next button text
-    prevBtnText: 'Previous',    // Previous button text
+    prevBtnText: 'Previous',    // Previous button text
   },
   onNext: () => {},             // Called when moving to next step from current step
   onPrevious: () => {},         // Called when moving to previous step from current step
@@ -384,5 +376,4 @@ Thanks to [BrowserStack](https://browserstack.com) for sponsoring the compatibil
 ## License
 
 MIT &copy; [Kamran Ahmed](https://twitter.com/kamranahmedse)
-
 

@@ -24,6 +24,7 @@ export const CLASS_POPOVER_TITLE = 'driver-popover-title';
 export const CLASS_POPOVER_DESCRIPTION = 'driver-popover-description';
 export const CLASS_POPOVER_FOOTER = 'driver-popover-footer';
 export const CLASS_CLOSE_BTN = 'driver-close-btn';
+export const CLASS_CLOSE_BTN_X = 'driver-close-btn-x';
 export const CLASS_NEXT_STEP_BTN = 'driver-next-btn';
 export const CLASS_PREV_STEP_BTN = 'driver-prev-btn';
 export const CLASS_BTN_DISABLED = 'driver-disabled';
@@ -37,7 +38,7 @@ export const ANIMATION_DURATION_MS = 300;
 export const POPOVER_HTML = (className = '') => `
   <div id="${ID_POPOVER}" class="${className}">
     <div class="${CLASS_POPOVER_TIP}"></div>
-    <div class="${CLASS_POPOVER_TITLE}">Popover Title</div>
+    <div class="${CLASS_POPOVER_TITLE}">Popover Title<button class="${CLASS_CLOSE_BTN_X}">X</button></div>
     <div class="${CLASS_POPOVER_DESCRIPTION}">Popover Description</div>
     <div class="driver-clearfix ${CLASS_POPOVER_FOOTER}">
       <button class="${CLASS_CLOSE_BTN}">Close</button>

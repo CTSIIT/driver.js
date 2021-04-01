@@ -4,6 +4,7 @@
     "browser": true
   },
   "rules": {
+	"linebreak-style": [2, "windows"],
     "no-underscore-dangle": "off",
     "no-plusplus": "off",
     "no-cond-assign": "off",
